@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form Validation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <form id="signupForm">
+    <h1>Sign Up</h1>
+
+    <label for="name">Name</label>
+    <input type="text" id="name">
+    <p id="nameError"></p>
+
+    <label for="email">Email</label>
+    <input type="text" id="email">
+    <p id="emailError"></p>
+
+    <label for="password">Password</label>
+    <input type="password" id="password">
+    <p id="passwordError"></p>
+
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword">
+    <p id="confirmPasswordError"></p>
+
+    <label>
+      <input type="checkbox" id="terms">
+      I agree to the terms
+    </label>
+    <p id="termsError"></p>
+
+    <button type="submit">Create Account</button>
+
+    <p id="successMessage"></p>
+  </form>
+
+</body>
+</html>

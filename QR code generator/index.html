@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>QR Code Generator</title>
+
+  <!-- QR Code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+  <h1>QR Code Generator</h1>
+
+  <p id="text">Samit is a BTech student</p>
+
+  <button id="generateButton">
+    Generate QR Code
+  </button>
+
+  <div id="qrCode"></div>
+
+  <script>
+    const generateButton =
+      document.querySelector("#generateButton");
+
+    const textElement =
+      document.querySelector("#text");
+
+    const qrCodeContainer =
+      document.querySelector("#qrCode");
+
+    generateButton.addEventListener("click", function () {
+      const text = textElement.textContent.trim();
+
+      if (text === "") {
+        qrCodeContainer.textContent = "There is no text";
+        return;
+      }
+
+      qrCodeContainer.innerHTML = "";
+
+      new QRCode(qrCodeContainer, {
+        text: text,
+        width: 200,
+        height: 200
+      });
+    });
+  </script>
+
+</body>
+</html>
